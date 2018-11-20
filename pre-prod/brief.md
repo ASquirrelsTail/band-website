@@ -1,23 +1,23 @@
-#Band website - Cotter
+# Band website - Cotter
 
-##Brief
+## Brief
 
 Cotter is Birmingham, UK singer/songwriter Tom Cotter. Tom is looking for a website the build his online presence. He already has a following across various social networks, but is looking to reach potential new fans, and keep current fans up to date on upcoming gigs. He's particularly keen to get visitors listening to his music, particularly on Spotify. He also wants to guide people towards his profiles on whichever social networks and apps visitors might be using.
 
 A lot of Cotter's fans already follow him on social media to stay up to date, so the target audience is predominanly new fans.
 
-##Goals
+## Goals
 
-+Create a website as a hub for Cotter's online presence.
-+Guide visitors to listen to Cotter's latest music.
-+Let visitors know about upcoming gigs.
-+Steer visitors towards Cotter's pages on social media.
++ Create a website as a hub for Cotter's online presence.
++ Guide visitors to listen to Cotter's latest music.
++ Let visitors know about upcoming gigs.
++ Steer visitors towards Cotter's pages on social media.
 
-##Target Audience
+## Target Audience
 
 The target audience Cotter's audience is mostly aged 18-39, they are tech savvy and likely to already use a variety of social media. They are an even split of genders.
 
-###User Stories
+### User Stories
 
 Jesse saw Cotter on the bill for a gig she's going to and wants to hear some of his songs before she sees him. She wants to find and listen to Cotters latest music.
 

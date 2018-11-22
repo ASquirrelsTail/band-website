@@ -1,1 +1,153 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:900|Roboto:300,400,400i,700');
+
+/*font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+body {
+	font-family: "Roboto", sans-serif;
+}
+
+/*-Hero images-*/
+
+.hero-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0px;
+}
+
+.hero-image--home {
+	background-image: url("../images/cover-image.jpg");
+	background-color: rgb(142, 169, 186);
+}
+
+/*-Header-*/
+
+.logo {
+	background-image: url("../images/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 15px;
+	padding-top: 18.7%;
+}
+
+.logo h1 {
+	/*Improvement on indent -9999px from http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	/*1px font-size to maintain parent div's aspect ratio*/
+	font-size: 1px;
+}
+
+.menu-toggle {
+	display: block;
+	font-size: 8vw;
+	padding-top: 10px;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-dropdown {
+	text-align: center;
+}
+
+.menu-link, .menu-link:visited {
+	display: inline;
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 900;
+	color: rgba(0, 0, 0, 0.7);
+	text-transform: uppercase;
+	font-size: 28px;
+	letter-spacing: 4px;
+	padding: 0px 5px;
+	transition: color 0.4s;
+		-webkit-transition: color 0.4s;
+		-moz-transition: color 0.4s;
+		-o-transition: color 0.4s;
+}
+
+.menu-link:hover, .menu-link:active, .menu-toggle:hover, .menu-toggle:active  {
+	color: rgba(0, 0, 0, 1);
+}
+
+.menu-link--current {
+	border-bottom: 2px solid black;
+	color: black;
+}
+
+/*For -md devices and above override collapse behavior for #collapse-menu navigation and style for larger devices*/
+
+@media (min-width: 768px) {
+
+	#collapse-menu.collapse:not(.show) {
+	  	display: inline-flex;
+	  		display: -ms-inline-flexbox;
+	}
+
+	#collapse-menu.collapsing {
+		transition: none;
+			-webkit-transition: none;
+			-moz-transition: none;
+			-o-transition: none;
+		height: auto;
+	}
+
+	/*Nav links still flash if you resize during the 0.35s the element is collapsing, it's to do with the height, but I don't know why "auto" doesnt fix it, do @media queries have a delay?*/
+
+	.menu-link, .menu-link:visited {
+		font-size: 2vw;
+		margin-left: 1vw;
+		padding: 8px 16px;
+		letter-spacing: 0.4vw;
+	}
+
+}
+
+/*-Footer-*/
+
+.footer {
+	background-color: #333333;
+	color: #fafafa;
+	min-height: 180px;
+}
+
+.social-header {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	color: #f0f0f0;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+
+.social-menu {
+	text-align: center;
+}
+
+.social-link {
+	color: #cccccc;
+	font-size: 30px;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	margin: 8px;
+	transition: color 0.4s;
+		-webkit-transition: color 0.4s;
+		-moz-transition: color 0.4s;
+		-o-transition: color 0.4s;
+}
+
+.social-link:hover, .social-link:active {
+	color: #ffffff;
+}
+
+.copy-notice {
+	color: #999999;
+	font-size: 0.7em;
+	text-align: center;
+	margin-bottom: 0.7em;
+}
+

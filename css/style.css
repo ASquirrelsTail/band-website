@@ -23,8 +23,15 @@ body {
 }
 
 .hero-image--home {
-	background-image: url("../images/cover-image.jpg");
+	background-image: url("../images/hero-image.jpg");
 	background-color: rgb(142, 169, 186);
+}
+
+.hero-image--shows {
+	background-image: url("../images/hero-image-shows.jpg");
+	background-color: rgb(31, 31, 31);
+	background-position: 75%;
+	color: white;
 }
 
 /*-Header-*/
@@ -84,6 +91,26 @@ body {
 	color: black;
 }
 
+/*lighter menu item modifiers for dark backgrounds*/
+
+.menu-toggle--light, .menu-link--light, .menu-link--light:visited  {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.menu-dropdown--light {
+	border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.menu-link--light:hover, .menu-link--light:active, .menu-toggle--light:hover, .menu-toggle--light:active  {
+	color: rgba(255, 255, 255, 1);
+}
+
+.menu-link--current--light {
+	border-bottom: 2px solid white;
+	color: white;
+}
+
 /*For -md devices and above override collapse behavior for #collapse-menu navigation and style for larger devices*/
 
 @media (min-width: 768px) {
@@ -108,9 +135,10 @@ body {
 
 	/*Nav links still flash if you resize during the 0.35s the element is collapsing, it's to do with the height, but I don't know why "auto" doesnt fix it, do @media queries have a delay?*/
 	
-	.menu-dropdown {
+	.menu-dropdown, .menu-dropdown--light {
 		border-bottom: none;
 		padding-bottom: none;
+		background-color: rgba(0,0,0,0);
 	}
 
 	.menu-link, .menu-link:visited {
@@ -230,11 +258,16 @@ body {
 	line-height: 1em;
 }
 
+.date-days--light {
+	border-bottom: 2px solid white;
+}
+
 .location {
 	font-family: "Nunito Sans", sans-serif;
 	font-weight: 200;
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
+	margin-top: 15px;
 }
 
 .shows-button, .shows-button:visited {
@@ -249,12 +282,21 @@ body {
 	border-color: #C37130;
 }
 
+.follow-link, .follow-link:visited {
+	color: black;
+}
+
+.follow-link:hover, .follow-link:active {
+	color: #cccccc;
+	text-decoration: underline;
+}
+
 @media (min-width: 768px) {
 	.section-wrapper {
 		padding: 0 4%;
 	}
 
-	.vr-hr:after {
+	.vr-hr-md:after {
 		content: "";
 		position: absolute;
 		left: 100%;
@@ -274,6 +316,19 @@ body {
 		float: left;
 		padding-right: 15px;
 		margin-bottom: 0.5em;
+	}
+}
+
+@media (min-width: 992px) {
+	.vr-hr-lg:after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 10%;
+		height: 80%;
+		width: initial;
+		border-left: 2px solid black;
+		border-bottom: none;
 	}
 }
 

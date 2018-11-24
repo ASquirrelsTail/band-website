@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:900|Roboto:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:900,400,200|Roboto:400,400i');
 
 /*font-family: 'Nunito Sans', sans-serif;
 font-family: 'Roboto', sans-serif;*/
 
 body {
 	font-family: "Roboto", sans-serif;
+}
+
+/*-General-*/
+
+.large-wrapper {
+	max-width: 1920px;
 }
 
 /*-Hero images-*/
@@ -50,6 +56,8 @@ body {
 
 .menu-dropdown {
 	text-align: center;
+	padding-bottom: 15px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.7);
 }
 
 .menu-link, .menu-link:visited {
@@ -79,6 +87,11 @@ body {
 /*For -md devices and above override collapse behavior for #collapse-menu navigation and style for larger devices*/
 
 @media (min-width: 768px) {
+	
+	/*Redundancy - site still works if either this stylesheet or bootstrap are missing/unavailable*/
+	.menu-toggle-wrapper {
+		display: none !important;
+	}
 
 	#collapse-menu.collapse:not(.show) {
 	  	display: inline-flex;
@@ -94,6 +107,11 @@ body {
 	}
 
 	/*Nav links still flash if you resize during the 0.35s the element is collapsing, it's to do with the height, but I don't know why "auto" doesnt fix it, do @media queries have a delay?*/
+	
+	.menu-dropdown {
+		border-bottom: none;
+		padding-bottom: none;
+	}
 
 	.menu-link, .menu-link:visited {
 		font-size: 2vw;
@@ -104,6 +122,167 @@ body {
 
 }
 
+/*Stop nav links from getting ridiculously large on particularly big displays*/
+
+@media (min-width: 2500px) {
+
+	#collapse-menu {
+		-ms-flex-pack: end;
+  		justify-content: flex-end;
+	}
+
+	.menu-link, .menu-link:visited {
+		font-size: 50px;
+		margin-left: 25px;
+		letter-spacing: 10px;
+	}
+}
+
+/*-Content-*/
+
+.section-wrapper {
+	background-color: #f9f9f9;
+}
+
+.heading {
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 400;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.heading--lead {
+	font-size: 2.5em;
+}
+
+.button {
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 900;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
+	border-radius: 1.5em;
+	margin-bottom: 15px;
+}
+
+/*Shortened border rule adapted from: https://ivan.reallusiondesign.com/how-to-make-border-smaller-than-div/*/
+
+.vr-hr:after {
+	content: "";
+	position: absolute;
+	left: 10%;
+	top: 100%;
+	width: 80%;
+	border-bottom: 2px solid black;
+}
+
+.album {
+	width: 80%;
+	max-width: 600px;
+	height: auto;
+	margin: 10%;
+	border: none;
+}
+
+.music-button, .music-button:visited {
+	color: white;
+	background-color: #5A8768;
+	border-color: #5A8768;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.music-button:hover, .music-button:active{
+	color: white;
+	background-color: #447151;
+	border-color: #447151;
+}
+
+.headshot {
+	display: block;
+	width: 45%;
+	max-width: 450px;
+	height: auto;
+	border-radius: 50%;
+	margin: 0.5em auto;
+	text-align: center;
+}
+
+.date {
+	display: block;
+	float: right;
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 36px;
+	font-weight: 200;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
+	text-align: center;
+	
+	margin: 0 12px;
+}
+
+.date-days {
+	font-size: 1.5em;
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid black;
+	line-height: 1em;
+}
+
+.location {
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 200;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
+}
+
+.shows-button, .shows-button:visited {
+	color: white;
+	background-color: #EE8A3A;
+	border-color: #EE8A3A;
+}
+
+.shows-button:hover, .shows-button:active{
+	color: white;
+	background-color: #C37130;
+	border-color: #C37130;
+}
+
+@media (min-width: 768px) {
+	.section-wrapper {
+		padding: 0 4%;
+	}
+
+	.vr-hr:after {
+		content: "";
+		position: absolute;
+		left: 100%;
+		top: 10%;
+		height: 80%;
+		width: initial;
+		border-left: 2px solid black;
+		border-bottom: none;
+	}
+
+	.heading--lead {
+		font-size: 5vw;
+	}
+
+	.headshot {
+		width: 30%;
+		float: left;
+		padding-right: 15px;
+		margin-bottom: 0.5em;
+	}
+}
+
+@media (min-width: 1920px) {
+	.heading--lead {
+		font-size: 96px;
+	}
+}
+
 /*-Footer-*/
 
 .footer {
@@ -112,13 +291,9 @@ body {
 	min-height: 180px;
 }
 
-.social-header {
-	font-family: "Nunito Sans", sans-serif;
-	font-size: 1.2em;
-	letter-spacing: 2px;
+.social-heading {
+	font-size: 16px;
 	color: #f0f0f0;
-	text-align: center;
-	text-transform: uppercase;
 	margin-top: 15px;
 	margin-bottom: 0px;
 }

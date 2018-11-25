@@ -10,7 +10,7 @@ body {
 /*-General-*/
 
 .large-wrapper {
-	max-width: 1920px;
+	max-width: 1600px;
 }
 
 /*-Hero images-*/
@@ -27,11 +27,21 @@ body {
 	background-color: rgb(142, 169, 186);
 }
 
+.hero-image--music {
+	background-image: url("../images/hero-image-music.jpg");
+	background-color: rgb(101, 101, 101);
+	color: white;
+}
+
 .hero-image--shows {
 	background-image: url("../images/hero-image-shows.jpg");
 	background-color: rgb(31, 31, 31);
-	background-position: 75%;
+	background-position: 75% 30%;
 	color: white;
+}
+
+.hero-image--none {
+	background-color: #d0d0d0;
 }
 
 /*-Header-*/
@@ -42,6 +52,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin-top: 15px;
+	margin-bottom: 15px;
 	padding-top: 18.7%;
 }
 
@@ -57,7 +68,6 @@ body {
 .menu-toggle {
 	display: block;
 	font-size: 8vw;
-	padding-top: 10px;
 	color: rgba(0, 0, 0, 0.7);
 }
 
@@ -65,6 +75,10 @@ body {
 	text-align: center;
 	padding-bottom: 15px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.menu-dropdown--no-border {
+	border: none;
 }
 
 .menu-link, .menu-link:visited {
@@ -77,9 +91,6 @@ body {
 	letter-spacing: 4px;
 	padding: 0px 5px;
 	transition: color 0.4s;
-		-webkit-transition: color 0.4s;
-		-moz-transition: color 0.4s;
-		-o-transition: color 0.4s;
 }
 
 .menu-link:hover, .menu-link:active, .menu-toggle:hover, .menu-toggle:active  {
@@ -99,6 +110,9 @@ body {
 
 .menu-dropdown--light {
 	border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.menu-dropdown--bg {
 	background-color: rgba(0,0,0,0.4);
 }
 
@@ -127,9 +141,6 @@ body {
 
 	#collapse-menu.collapsing {
 		transition: none;
-			-webkit-transition: none;
-			-moz-transition: none;
-			-o-transition: none;
 		height: auto;
 	}
 
@@ -137,7 +148,7 @@ body {
 	
 	.menu-dropdown, .menu-dropdown--light {
 		border-bottom: none;
-		padding-bottom: none;
+		padding-bottom: initial;
 		background-color: rgba(0,0,0,0);
 	}
 
@@ -152,17 +163,11 @@ body {
 
 /*Stop nav links from getting ridiculously large on particularly big displays*/
 
-@media (min-width: 2500px) {
-
-	#collapse-menu {
-		-ms-flex-pack: end;
-  		justify-content: flex-end;
-	}
-
+@media (min-width: 1800px) {
 	.menu-link, .menu-link:visited {
-		font-size: 50px;
-		margin-left: 25px;
-		letter-spacing: 10px;
+		font-size: 36px;
+		margin-left: 18px;
+		letter-spacing: 8px;
 	}
 }
 
@@ -194,6 +199,10 @@ body {
 	margin-bottom: 15px;
 }
 
+.button .fas, .button .fab {
+	font-weight: initial;
+}
+
 /*Shortened border rule adapted from: https://ivan.reallusiondesign.com/how-to-make-border-smaller-than-div/*/
 
 .vr-hr:after {
@@ -217,8 +226,6 @@ body {
 	color: white;
 	background-color: #5A8768;
 	border-color: #5A8768;
-	margin-top: 15px;
-	margin-bottom: 0;
 }
 
 .music-button:hover, .music-button:active{
@@ -246,8 +253,8 @@ body {
 	letter-spacing: 0.125em;
 	text-transform: uppercase;
 	text-align: center;
-	
 	margin: 0 12px;
+	padding-top: 10px;
 }
 
 .date-days {
@@ -282,6 +289,18 @@ body {
 	border-color: #C37130;
 }
 
+.contact-button, .contact-button:visited {
+	color: white;
+	background-color: #696969;
+	border-color: #696969;
+}
+
+.contact-button:hover, .contact-button:active{
+	color: white;
+	background-color: #7a7a7a;
+	border-color: #7a7a7a;
+}
+
 .follow-link, .follow-link:visited {
 	color: black;
 }
@@ -289,6 +308,37 @@ body {
 .follow-link:hover, .follow-link:active {
 	color: #cccccc;
 	text-decoration: underline;
+}
+
+.embed-wrapper {
+	width: 90%;
+	margin: 15px 5%;
+}
+
+/*Spotify embed is responsive, on xs & sm devices to show just the controls height should be 80px*/
+
+.spotify-embed:before {
+	padding-top: 80px;
+}
+
+.embed-wrapper--spotify {
+	max-width: 500px;
+}
+
+.testamonial {
+	font-size: 1.4em;
+	font-style: italic;
+	margin-left: 15%;
+	margin-right: 5%;
+	margin-top: 30px;
+	padding-left: 15px;
+	border-left: 2px solid rgba( 255, 255, 255, 0.5);
+}
+
+.attribution {
+	font-size: 1rem;
+	font-style: normal;
+	color: rgba( 255, 255, 255, 0.6);
 }
 
 @media (min-width: 768px) {
@@ -317,6 +367,13 @@ body {
 		padding-right: 15px;
 		margin-bottom: 0.5em;
 	}
+
+	/*On md and larger devices spotify embed should show album art, it needs to be square +80px vertically for controls*/
+
+	.spotify-embed:before {
+		padding-top: 100%;
+		padding-bottom: 80px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -332,9 +389,9 @@ body {
 	}
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
 	.heading--lead {
-		font-size: 96px;
+		font-size: 80px;
 	}
 }
 
@@ -365,9 +422,6 @@ body {
 	text-align: center;
 	margin: 8px;
 	transition: color 0.4s;
-		-webkit-transition: color 0.4s;
-		-moz-transition: color 0.4s;
-		-o-transition: color 0.4s;
 }
 
 .social-link:hover, .social-link:active {

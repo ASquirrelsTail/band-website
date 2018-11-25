@@ -11,26 +11,26 @@
 </head>
 
 <body>
-    <div class="hero-image hero-image--home">
+    <div class="hero-image hero-image--music">
         <header>
             <nav class="container-fluid large-wrapper">
                 <div class="row align-items-center">
                     <div class="col-8 col-md-4">
                         <a href="index.html">
-                		<div class="logo">
-                			<h1>Cotter</h1>
-                		</div>
-                	</a>
+                        <div class="logo">
+                            <h1>Cotter</h1>
+                        </div>
+                    </a>
                     </div>
                     <div class="col-1 offset-2 offset-md-7 d-block menu-toggle-wrapper">
-                        <a data-toggle="collapse" href="#collapse-menu" role="button" aria-expanded="false" aria-controls="collapse-menu" class="menu-toggle"><span class="fas fa-bars" aria-hidden="true"></span></a>
+                        <a data-toggle="collapse" href="#collapse-menu" role="button" aria-expanded="false" aria-controls="collapse-menu" class="menu-toggle menu-toggle--light"><span class="fas fa-bars" aria-hidden="true"></span></a>
                     </div>
                     <div class="col-12 col-md-8 collapse" id="collapse-menu">
-                        <ul class="nav flex-column flex-md-row menu-dropdown">
-                            <li class="nav-item"><a href="index.html" class="nav-link menu-link">Home</a></li>
-                            <li class="nav-item"><a href="music.html" class="nav-link menu-link menu-link--current">Music</a></li>
-                            <li class="nav-item"><a href="shows.html" class="nav-link menu-link">Shows</a></li>
-                            <li class="nav-item"><a href="contact.html" class="nav-link menu-link">Contact</a></li>
+                        <ul class="nav flex-column flex-md-row menu-dropdown menu-dropdown--light">
+                            <li class="nav-item"><a href="index.html" class="nav-link menu-link menu-link--light">Home</a></li>
+                            <li class="nav-item"><a href="music.html" class="nav-link menu-link menu-link--light menu-link--current--light">Music</a></li>
+                            <li class="nav-item"><a href="shows.html" class="nav-link menu-link menu-link--light">Shows</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link menu-link menu-link--light">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -40,27 +40,64 @@
             <div class="row justify-content-center">
                 <div class="col-11 section-lead">
                     <div class="row  align-items-center">
-                        
+                        <div class="col-12 col-lg-6">
+                            <h2 class="heading">In your eyes</h2>
+                            <div class="mx-auto embed-wrapper embed-wrapper--spotify">
+                                <div class="embed-responsive spotify-embed">
+                                    <iframe src="https://open.spotify.com/embed/track/2JBhBd3MmkMfdQ8TjUWfZg" allow="encrypted-media" class="embed-responsive-item"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <h3 class="heading">In praise of Cotter</h3>
+                    <blockquote class="testamonial">
+                        <p>Birmingham singer-songwriter with an impressively soulful voice and poppy style, accompanying himself confidently with clever finger-picked guitar. It’s clear that Cotter possesses a talent to watch out for in the future.</p>
+                        <span class="text-right d-block attribution">Ian Paget - Indie Midlands</span>
+                    </blockquote>
+                    <blockquote class="testamonial">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem voluptatibus nulla a quae possimus reiciendis corrupti.</p>
+                        <span class="text-right d-block attribution">Jane Doe</span>
+                    </blockquote>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
     </div>
     <div class="section-wrapper">
         <section class="container-fluid large-wrapper">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6 vr-hr">
+                <div class="col-12 col-md-6 vr-hr vr-hr-md text-center">
+                    <h3 class="heading">Live Recordings</h3>
+                    <div class="embed-responsive embed-responsive-16by9 embed-wrapper">
+                        <iframe src="https://www.youtube.com/embed/lOwZwYhqL_c" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="embed-responsive-item" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="heading">Vacant - Live at the MAC Theatre Birmingham</h4>
+                    <h5 class="heading">For more live tracks and videos.</h5>
+                    <a href="https://www.youtube.com/channel/UCVakLfM_eKAAy9xsk_jinAg" target="_blank" class="btn button music-button"><span class="fab fa-youtube"  aria-hidden="true"></span> Subscribe on Youtube</a>                    
                     
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 align-self-center">
                     
+                    <h3 class="heading">Hear more music from Cotter</h3>
+                        <h5 class="heading">Find and stream all of Cotters music and be the first to hear new tracks.</h5>
+                            <div class="col-12 text-center align-items-center">
+                                <a href="https://open.spotify.com/artist/5B30D0nFyQrSQ9EYfesvDU?si=Ajdc7XM5QB2V6Vp158a02A" target="_blank" class="btn button music-button"><span class="fab fa-spotify" aria-hidden="true"></span> On Spotify</a>
+                            </div>
+                            <div class="col-12 text-center align-items-center">
+                                <a href="https://itunes.apple.com/us/artist/cotter/" target="_blank" class="btn button music-button"><span class="fab fa-apple" aria-hidden="true"></span> On Apple Music</a>
+                            </div>
+                            <div class="col-12 text-center align-items-center">
+                                <a href="https://soundcloud.com/cotter_music" target="_blank" class="btn button music-button"><span class="fab fa-soundcloud" aria-hidden="true"></span> On Soundcloud</a>
+                            </div>
                 </div>
             </div>
         </section>
     </div>
     <footer class="container-fluid">
         <div class="row justify-content-center footer">
-            <div class="col-12"><h5 class="heading social-heading">Like and follow for updates from Cotter</h3></div>
+            <div class="col-12"><h5 class="heading social-heading">Like and follow for updates from Cotter</h5>
+            </div>
             <div class="col-7">
                 <div class="social-menu">
                     <a href="https://www.facebook.com/cotter.music/" target="_blank" class="social-link"><span class="fab fa-facebook-f"  aria-hidden="true"></span></a>
@@ -69,13 +106,12 @@
                     <a href="https://www.youtube.com/channel/UCVakLfM_eKAAy9xsk_jinAg" target="_blank" class="social-link"><span class="fab fa-youtube"  aria-hidden="true"></span></a>
                     <a href="https://open.spotify.com/artist/5B30D0nFyQrSQ9EYfesvDU?si=Ajdc7XM5QB2V6Vp158a02A" target="_blank" class="social-link"><span class="fab fa-spotify" aria-hidden="true"></span></a>
                     <a href="https://itunes.apple.com/us/artist/cotter/" target="_blank" class="social-link"><span class="fab fa-apple" aria-hidden="true"></span></a>
-                    <a href="https://soundcloud.com/cotter_music" target="_blank" class="social-link"><span class="fab fa-soundcloud" aria-hidden="true" class="social-link"></span></a>
+                    <a href="https://soundcloud.com/cotter_music" target="_blank" class="social-link"><span class="fab fa-soundcloud" aria-hidden="true"></span></a>
                 </div>
             </div>
             <div class="col-12 align-self-end copy-notice">&copy; Cotter 2018</div>
         </div>
         <a href="contact.html"></a>
-
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

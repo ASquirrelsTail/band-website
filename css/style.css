@@ -1,13 +1,12 @@
+/*fonts Nunito Sans and Roboto imported using Google Fonts API*/
+
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:900,400,200|Roboto:400,400i');
 
-/*font-family: 'Nunito Sans', sans-serif;
-font-family: 'Roboto', sans-serif;*/
+/*-General-*/
 
 body {
 	font-family: "Roboto", sans-serif;
 }
-
-/*-General-*/
 
 .large-wrapper {
 	max-width: 1600px;
@@ -20,6 +19,10 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin: 0px;
+}
+
+.hero-image--none {
+	background-color: #d0d0d0;
 }
 
 .hero-image--home {
@@ -38,10 +41,6 @@ body {
 	background-color: rgb(31, 31, 31);
 	background-position: 75% 30%;
 	color: white;
-}
-
-.hero-image--none {
-	background-color: #d0d0d0;
 }
 
 /*-Header-*/
@@ -129,7 +128,10 @@ body {
 
 @media (min-width: 768px) {
 	
-	/*Redundancy - site still works if either this stylesheet or bootstrap are missing/unavailable*/
+	/*Redundancy - site still works if either this stylesheet or bootstrap are missing/unavailable.
+	If this stylesheet doesn't load the menu will always display as a collapsing component, but if 
+	bootstrap is used to hide the toggle it cant be accessed. So this css rule is used to hide the 
+	controls instead*/
 	.menu-toggle-wrapper {
 		display: none !important;
 	}
@@ -144,8 +146,6 @@ body {
 		height: auto;
 	}
 
-	/*Nav links still flash if you resize during the 0.35s the element is collapsing, it's to do with the height, but I don't know why "auto" doesnt fix it, do @media queries have a delay?*/
-	
 	.menu-dropdown, .menu-dropdown--light {
 		border-bottom: none;
 		padding-bottom: initial;
@@ -164,7 +164,7 @@ body {
 /*Stop nav links from getting ridiculously large on particularly big displays*/
 
 @media (min-width: 1800px) {
-	.menu-link, .menu-link:visited {
+	.menu-link {
 		font-size: 36px;
 		margin-left: 18px;
 		letter-spacing: 8px;
@@ -301,13 +301,9 @@ body {
 	border-color: #7a7a7a;
 }
 
-.follow-link, .follow-link:visited {
-	color: black;
-}
-
-.follow-link:hover, .follow-link:active {
-	color: #cccccc;
-	text-decoration: underline;
+.contact-avatar {
+	margin: 15px;
+	border-radius: 50%;
 }
 
 .embed-wrapper {
@@ -364,7 +360,7 @@ body {
 	.headshot {
 		width: 30%;
 		float: left;
-		padding-right: 15px;
+		margin-right: 15px;
 		margin-bottom: 0.5em;
 	}
 

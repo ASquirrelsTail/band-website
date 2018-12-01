@@ -2,7 +2,9 @@
 
 Stream One Milestone Project: User Centric Frontend Development - Code Institute
 
-This a website I have produced for singer/songwriter Tom Cotter. The site allows visitors to listen to some of his music and get information about upcoming gigs. As well as find him on social media and gte in touch directly.
+This is a website I have produced for singer/songwriter Tom Cotter. The site allows visitors to listen to some of his music and get information about upcoming gigs. As well as find him on social media and get in touch directly.
+
+The site can be viewed on [GitHub Pages here](https://asquirrelstail.github.io/band-website/).
  
 ## UX
 
@@ -31,9 +33,12 @@ With these as a guide I was able to start coding the main pages of the site.
 
 ### Features Left to Implement
 
+The following features fall outside the scope of the milestone project, but will be implemented before the site is made live.
+
 - Meta tags for SEO.
-- Fallback music player for browsers that don't support Spotify Web Player.
-- Javascript based email form to replace current mailto: form.
+- Alternative music player for browsers that don't support Spotify Web Player.
+    -  An alternative music player is required for users of Internet Explorer. Accurately detecting the user's browser and inserting the alternative player will require the use of Javascript.
+- EmailJS based email form to replace current mailto: form.
 
 ## Technologies Used
 
@@ -41,10 +46,12 @@ With these as a guide I was able to start coding the main pages of the site.
 - CSS3
 - [Bootstrap v4.1.3](https://getbootstrap.com/)
     -  Bootstrap was used for responsive layout, and the collapsing nav component. CSS rules were modified and expanded upon to achieve the desired effects, such as only having the menu appear as a dropdown at certain resolutions.
+- [Google Fonts](https://fonts.google.com/)
+    -  Google Fonts was used to make sure users could access required fonts, Roboto and Nunito Sans, which was chosen as it is an open source font similar to Avenir which is used in much of Cotter's branding.
 - [Fontawesome v5.5.0](https://fontawesome.com/)
     -  The free version of Fontawesome webfonts was used to provide icons for buttons and social media links.
 - [Spotify Play Button Widget](https://developer.spotify.com/documentation/widgets/generate/play-button/)
-    -  A Spotify widget was used to allow visitors to listen to Cotters songs using Spotify from the site. The style of the iframe was modified using Bootstrap's embed-responsive and custom CSS rules to improve its responsiveness across a variety of resolutions.
+    -  A Spotify widget was used to allow visitors to listen to Cotters songs using Spotify from the site. The style of the iframe was modified using Bootstrap's embed-responsive and custom CSS rules to improve its responsiveness across a variety of resolutions. The embed does not work for users of Internet Explorer but IE is increasingly uncommon, particularly within the target audience.
 - [Youtube Video Embed](https://developers.google.com/youtube/player_parameters)
     -  Youtube's embeded video player was used to display a live recording from one of Cotters shows. It was styled using Bootstrap's embed-responsive CSS rules to work well at a variety of resolutions.
 
@@ -58,7 +65,7 @@ HTML5 input validation for the contact form was tested manually.
 
 ## Deployment
 
-The site has been deployed from the master branch to GitHub Pages, while some associated technologies are hosted externally on CDNs.
+The site has been deployed from the master branch to GitHub Pages [here](https://asquirrelstail.github.io/band-website/), while some associated frameworks are hosted on external CDNs.
 
 ## Credits
 
@@ -70,7 +77,7 @@ The quote from Ian Paget came from his review on [Indie Midlands](http://www.ind
 ### Media
 Photographs used on the site are copyright Tom Cotter, used with permission.
 
-The color pallet was chosen using colors taken from images Tom provided and [https://coolors.co/](https://coolors.co/) to generate a couple of complementary tones to use in the design.
+The color pallet was chosen using colors taken from images Tom provided and using [https://coolors.co/](https://coolors.co/) to generate a couple of complementary tones to use in the design.
 
 ### Acknowledgements
 

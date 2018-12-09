@@ -35,7 +35,6 @@ With these as a guide I was able to start coding the main pages of the site.
 
 The following features fall outside the scope of the milestone project, but will be implemented before the site is made live.
 
-- Meta tags for SEO.
 - Alternative music player for browsers that don't support Spotify Web Player.
     -  An alternative music player is required for users of Internet Explorer. Accurately detecting the user's browser and inserting the alternative player will require the use of Javascript.
 - EmailJS based email form to replace current mailto: form.

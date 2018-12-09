@@ -32,6 +32,7 @@ body {
 
 .hero-image--music {
 	background-image: url("../images/hero-image-music.jpg");
+	background-position: 50% 30%;
 	background-color: rgb(101, 101, 101);
 	color: white;
 }
@@ -198,6 +199,8 @@ body {
 	border-radius: 1.5em;
 	margin-bottom: 15px;
 }
+
+/*Reset font-weight for Fontawesome glyphs inside buttons*/
 
 .button .fas, .button .fab {
 	font-weight: initial;
